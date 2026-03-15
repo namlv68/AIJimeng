@@ -342,7 +342,7 @@ const App = () => {
                             {isSyncing && <span className="text-[10px] text-amber-500 font-bold animate-pulse flex items-center gap-1"><Loader2 size={10} className="animate-spin" /> ĐANG ĐỒNG BỘ...</span>}
                           </div>
                           <button onClick={() => copyToClipboard(currentEpisode.prompt.vi, 'vi')} className="p-2 bg-slate-800 rounded-xl text-slate-400 hover:text-white transition-all">
-                            {isCopied === 'vi' ? <span className="text-[10px] text-emerald-400 font-bold">COPIED</span> : <Copy size={14} />}
+                            {isCopied === 'vi' ? <span className="text-[10px] text-emerald-400 font-bold">ĐÃ SAO CHÉP</span> : <Copy size={14} />}
                           </button>
                         </div>
                         <textarea 
@@ -364,8 +364,8 @@ const App = () => {
                         <div className="space-y-3">
                           <div className="flex justify-between items-center">
                             <span className="text-[10px] font-black text-red-500 uppercase tracking-[0.2em]">English</span>
-                            <button onClick={() => copyToClipboard(currentEpisode.prompt.en, 'en')} className="p-1.5 bg-slate-800 rounded-lg text-slate-400 hover:text-white transition-all">
-                              <Copy size={12} />
+                            <button onClick={() => copyToClipboard(currentEpisode.prompt.en, 'en')} className="p-1.5 bg-slate-800 rounded-lg text-slate-400 hover:text-white transition-all flex items-center gap-1">
+                              {isCopied === 'en' ? <span className="text-[9px] text-emerald-400 font-bold">ĐÃ SAO CHÉP</span> : <Copy size={12} />}
                             </button>
                           </div>
                           <div className="text-[12px] text-slate-400 bg-slate-800/30 p-4 rounded-2xl border border-slate-700/30 italic whitespace-pre-wrap leading-relaxed">
@@ -375,8 +375,8 @@ const App = () => {
                         <div className="space-y-3">
                           <div className="flex justify-between items-center">
                             <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.2em]">Chinese</span>
-                            <button onClick={() => copyToClipboard(currentEpisode.prompt.zh, 'zh')} className="p-1.5 bg-slate-800 rounded-lg text-slate-400 hover:text-white transition-all">
-                              <Copy size={12} />
+                            <button onClick={() => copyToClipboard(currentEpisode.prompt.zh, 'zh')} className="p-1.5 bg-slate-800 rounded-lg text-slate-400 hover:text-white transition-all flex items-center gap-1">
+                              {isCopied === 'zh' ? <span className="text-[9px] text-emerald-400 font-bold">ĐÃ SAO CHÉP</span> : <Copy size={12} />}
                             </button>
                           </div>
                           <div className="text-[12px] text-slate-400 bg-slate-800/30 p-4 rounded-2xl border border-slate-700/30 italic whitespace-pre-wrap leading-relaxed">
